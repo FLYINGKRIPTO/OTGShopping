@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">OTG Shopping</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    //all stings for final_pay_dialog
+    <string name="final_bill_pay_tv_text">Your total bill is:</string>
+    <string name="final_bill_pay_pay_btn">Pay</string>
+    <string name="final_bill_pay_cancel_btn">Cancel</string>
+    //all string for Activity MainScreen
+    <string name="main_screen_shop_btn">Start Shopping</string>
+</resources>

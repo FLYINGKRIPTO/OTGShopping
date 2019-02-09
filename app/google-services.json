@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "928323974759",
+    "firebase_url": "https://shoping-app-fe992.firebaseio.com",
+    "project_id": "shoping-app-fe992",
+    "storage_bucket": "shoping-app-fe992.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928323974759:android:73ce88c977782614",
+        "android_client_info": {
+          "package_name": "com.example.otgshopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928323974759-1a28m9u5klaavga0rtu3ll07qhu95vhh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_8KdcY4TgBPirmAZnFcZbC6B-jgqeQHE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
