@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -28,7 +29,7 @@ import java.util.List;
 
 public class ShopActivity extends AppCompatActivity {
 
-    ImageView addCart , payBill ;
+    ImageView addCart , payBill,add,subtract,delete ;
     ListView itemList ;
     ArrayList<items> list ;
     int totalBill = 0 ;
@@ -43,6 +44,10 @@ public class ShopActivity extends AppCompatActivity {
         list = new ArrayList<items>() ;
         final ItemListAdapter itemListAdapter = new ItemListAdapter(this,list) ;
         itemList.setAdapter(itemListAdapter);
+
+
+
+
       //  list.add(new items("Parle G","$5.00","1")) ;
         addCart = findViewById(R.id.add_cart) ;
         addCart.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +57,8 @@ public class ShopActivity extends AppCompatActivity {
             }
         });
         mProducts = new ArrayList<>();
+
+
 
         payBill = findViewById(R.id.pay_bill) ;
         payBill.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +107,7 @@ public class ShopActivity extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                int flag=0;
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Products products = snapshot.getValue(Products.class);
                     mProducts.add(products);
@@ -109,13 +117,11 @@ public class ShopActivity extends AppCompatActivity {
                             Log.d(TAG, "onDataChange: equal " +barcodeValue);
                             Toast.makeText(ShopActivity.this,"Valid Barcode",Toast.LENGTH_SHORT).show();
                             Log.d(TAG, "onDataChange: valid barcode ");
-
                             final ItemListAdapter itemListAdapter = new ItemListAdapter(getApplicationContext(),list) ;
                             itemList.setAdapter(itemListAdapter);
                             list.add(new items(products.getItem(),products.getPrice(),1L)) ;
+                            flag = 1;
                         }
-
-
 
 
 
@@ -124,6 +130,8 @@ public class ShopActivity extends AppCompatActivity {
                     Log.d(TAG, "onDataChange: Name "+ products.getItem());
                     Log.d(TAG, "onDataChange: Price "+ products.getPrice());*/
                 }
+
+
 
 
 
