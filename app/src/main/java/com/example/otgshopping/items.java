@@ -1,9 +1,9 @@
 package com.example.otgshopping;
 
 public class items {
-    private String itemName , itemPrice , itemQuantity ;
-
-    public items(String itemName, String itemPrice, String itemQuantity) {
+    private String itemName  ;
+    private Long itemPrice, itemQuantity;
+    public items(String itemName,Long itemPrice, Long itemQuantity) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.itemQuantity = itemQuantity;
@@ -13,11 +13,11 @@ public class items {
         return itemName;
     }
 
-    public String getItemPrice() {
+    public Long getItemPrice() {
         return itemPrice;
     }
 
-    public String getItemQuantity() {
+    public Long getItemQuantity() {
         return itemQuantity;
     }
 }

@@ -41,8 +41,8 @@ public class ItemListAdapter extends ArrayAdapter<items> {
             }
         });
         itemName.setText(desc.get(position).getItemName());
-        itemPrice.setText(desc.get(position).getItemPrice());
-        itemQuantity.setText(desc.get(position).getItemQuantity());
+        itemPrice.setText(String.valueOf(desc.get(position).getItemPrice()));
+        itemQuantity.setText(String.valueOf(desc.get(position).getItemQuantity()));
         return listView;
     }
 }

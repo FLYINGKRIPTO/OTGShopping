@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "928323974759-0gfh61lvfas9fegnbqkef1cvmtckdcgo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.otgshopping",
+            "certificate_hash": "0e6fb3e02fbc613595e032a7ab6806bebb4eafe5"
+          }
+        },
+        {
           "client_id": "928323974759-1a28m9u5klaavga0rtu3ll07qhu95vhh.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928323974759-1a28m9u5klaavga0rtu3ll07qhu95vhh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
