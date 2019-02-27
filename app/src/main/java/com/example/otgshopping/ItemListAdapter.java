@@ -30,7 +30,7 @@ public class ItemListAdapter extends ArrayAdapter<items> {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final View listView = layoutInflater.inflate(R.layout.list_layout, parent, false);
         final TextView itemName = listView.findViewById(R.id.item_name);
-        TextView itemPrice = listView.findViewById(R.id.item_price);
+        final TextView itemPrice = listView.findViewById(R.id.item_price);
         final TextView itemQuantity = listView.findViewById(R.id.quantity_item_tv);
         ImageView add = listView.findViewById(R.id.add_item_iv);
         ImageView subtract = listView.findViewById(R.id.rem_item_iv);
@@ -49,6 +49,7 @@ public class ItemListAdapter extends ArrayAdapter<items> {
                 int item = Integer.parseInt(String.valueOf(itemQuantity.getText()));
                 item++;
                 itemQuantity.setText(item+"");
+
             }
         });
         subtract.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +59,7 @@ public class ItemListAdapter extends ArrayAdapter<items> {
                 if(item>=2){
                     item--;
                     itemQuantity.setText(item+"");
+
                 }
                 else {
                     Toast.makeText(getContext(),"Cant have 0 items",Toast.LENGTH_SHORT).show();
@@ -67,7 +69,7 @@ public class ItemListAdapter extends ArrayAdapter<items> {
             }
         });
         itemName.setText(desc.get(position).getItemName());
-        itemPrice.setText(String.valueOf(desc.get(position).getItemPrice()));
+        itemPrice.setText(" ₹  : "+String.valueOf(desc.get(position).getItemPrice()));
         itemQuantity.setText(String.valueOf(desc.get(position).getItemQuantity()));
         return listView;
     }
