@@ -1,7 +1,11 @@
 package com.example.otgshopping;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,7 +39,9 @@ public class MainScreen extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(MainScreen.this,ShopActivity.class));
           mProducts = new ArrayList<>();
-
+                if (ContextCompat.checkSelfPermission(MainScreen.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(MainScreen.this, new String[]{Manifest.permission.CAMERA}, 101);
+                }
        updateDatabase();
        readAllProducts();
             }
