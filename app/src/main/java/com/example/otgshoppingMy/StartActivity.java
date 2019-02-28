@@ -1,6 +1,5 @@
-package com.example.otgshopping;
+package com.example.otgshoppingMy;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

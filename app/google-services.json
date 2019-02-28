@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "928323974759",
-    "firebase_url": "https://shoping-app-fe992.firebaseio.com",
-    "project_id": "shoping-app-fe992",
-    "storage_bucket": "shoping-app-fe992.appspot.com"
+    "project_number": "465801954763",
+    "firebase_url": "https://otgshoppingmy-24c6c.firebaseio.com",
+    "project_id": "otgshoppingmy-24c6c",
+    "storage_bucket": "otgshoppingmy-24c6c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:928323974759:android:73ce88c977782614",
+        "mobilesdk_app_id": "1:465801954763:android:1dde016aac7d6312",
         "android_client_info": {
-          "package_name": "com.example.otgshopping"
+          "package_name": "com.example.otgshoppingMy"
         }
       },
       "oauth_client": [
         {
-          "client_id": "928323974759-0gfh61lvfas9fegnbqkef1cvmtckdcgo.apps.googleusercontent.com",
+          "client_id": "465801954763-tbta15o6vfn5iivj22sdhrlom4asj6at.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.otgshopping",
+            "package_name": "com.example.otgshoppingMy",
             "certificate_hash": "0e6fb3e02fbc613595e032a7ab6806bebb4eafe5"
           }
         },
         {
-          "client_id": "928323974759-1a28m9u5klaavga0rtu3ll07qhu95vhh.apps.googleusercontent.com",
+          "client_id": "465801954763-0u46jdbdlst84kmhmlgb68tihe5pvurb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD_8KdcY4TgBPirmAZnFcZbC6B-jgqeQHE"
+          "current_key": "AIzaSyAM9sdT55Zr1GqTuFErJewEWIXC4-4ZgOk"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "928323974759-1a28m9u5klaavga0rtu3ll07qhu95vhh.apps.googleusercontent.com",
+              "client_id": "465801954763-0u46jdbdlst84kmhmlgb68tihe5pvurb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

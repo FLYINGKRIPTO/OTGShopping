@@ -39,7 +39,7 @@
 
     <fragment
         android:id="@+id/fragment_pay_method"
-        android:name="com.example.otgshopping.FragPayment"
+        android:name="com.example.otgshoppingMy.FragPayment"
         android:layout_width="211dp"
         android:layout_height="154dp"
         android:layout_marginStart="8dp"

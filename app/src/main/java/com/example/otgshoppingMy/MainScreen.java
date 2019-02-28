@@ -1,4 +1,4 @@
-package com.example.otgshopping;
+package com.example.otgshoppingMy;
 
 import android.Manifest;
 import android.content.Intent;

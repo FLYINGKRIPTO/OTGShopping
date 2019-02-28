@@ -1,4 +1,4 @@
-package com.example.otgshopping;
+package com.example.otgshoppingMy;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;

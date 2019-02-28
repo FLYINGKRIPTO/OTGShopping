@@ -1,6 +1,5 @@
-package com.example.otgshopping;
+package com.example.otgshoppingMy;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -8,9 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -18,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.barcode.Barcode;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class ShopActivity extends AppCompatActivity {
@@ -67,6 +66,7 @@ public class ShopActivity extends AppCompatActivity {
                 final Dialog dialog_final_pay = new Dialog(ShopActivity.this);
                 dialog_final_pay.setContentView(R.layout.final_pay_dialog);
                 Button finalCancelButton = dialog_final_pay.findViewById(R.id.final_cancel_btn) ;
+                Button finalPayButton = dialog_final_pay.findViewById(R.id.final_pay_btn);
                 finalCancelButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -74,6 +74,25 @@ public class ShopActivity extends AppCompatActivity {
                     }
                 });
                 dialog_final_pay.show();
+
+                for(items it  : list){
+                    Log.d(TAG, "onClick: Item Num ");
+                    Log.d(TAG, "onClick: Name "+ it.getItemName());
+                    Log.d(TAG, "onClick: price "+ it.getItemPrice());
+                    Log.d(TAG, "onClick: quantity "+ it.getItemQuantity());
+                }
+                finalPayButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+                        HashMap<String , Object> hashMap = new HashMap<>();
+                        hashMap.put("list",list);
+                        hashMap.put("buyer", FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+
+                        reference.child("Orders").push().setValue(hashMap);
+                    }
+                });
 
             }
         });

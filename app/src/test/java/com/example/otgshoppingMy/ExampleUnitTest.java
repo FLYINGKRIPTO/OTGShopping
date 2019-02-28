@@ -1,4 +1,4 @@
-package com.example.otgshopping;
+package com.example.otgshoppingMy;
 
 import org.junit.Test;
 

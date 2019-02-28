@@ -1,4 +1,4 @@
-package com.example.otgshopping;
+package com.example.otgshoppingMy;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

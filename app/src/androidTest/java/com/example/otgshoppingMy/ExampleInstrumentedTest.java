@@ -1,4 +1,4 @@
-package com.example.otgshopping;
+package com.example.otgshoppingMy;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
