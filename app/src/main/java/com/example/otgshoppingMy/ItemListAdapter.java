@@ -61,7 +61,7 @@ public class ItemListAdapter extends ArrayAdapter<items> {
 
                 }
                 else {
-                    Toast.makeText(getContext(),"Cant have 0 items",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(),"Cant have 0 list",Toast.LENGTH_SHORT).show();
                 }
 
 

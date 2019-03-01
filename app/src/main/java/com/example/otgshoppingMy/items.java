@@ -3,6 +3,9 @@ package com.example.otgshoppingMy;
 public class items {
     private String itemName  ;
     private Long itemPrice, itemQuantity;
+    public items(){
+
+    }
     public items(String itemName,Long itemPrice, Long itemQuantity) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
