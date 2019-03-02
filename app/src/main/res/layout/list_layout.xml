@@ -10,16 +10,17 @@
     android:clickable="false">
 
     <FrameLayout
-        android:padding="8dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
     <LinearLayout
-        android:padding="8dp"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
+
         android:clickable="false">
 
         <ImageView

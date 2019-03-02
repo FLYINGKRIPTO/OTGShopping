@@ -6,15 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".CashierActivity">
 
+    <android.support.v7.widget.CardView
+        android:layout_width="340dp"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_above="@id/scan">
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/buyer_name"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="drgdfgdfhdh" />
+        <TextView
+            android:id="@+id/total_price"
+            android:layout_alignParentRight="true"
+            android:layout_toEndOf="@id/buyer_name"
+            android:text="200"
+            android:paddingTop="20dp"
+            android:gravity="right"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+           >
+
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v7.widget.CardView>
     <Button
         android:id="@+id/scan"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="90dp"
+        android:layout_marginBottom="60dp"
         android:text="SCAN"
-        android:textSize="25sp"
+        android:textSize="20sp"
         />
 
 
