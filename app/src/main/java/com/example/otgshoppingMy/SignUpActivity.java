@@ -23,7 +23,7 @@ import java.util.HashMap;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    EditText username , email, passowrd;
+    EditText username , email, passowrd, phoneNumber;
     Button signup;
 
     FirebaseAuth auth;
@@ -37,6 +37,7 @@ public class SignUpActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
         passowrd = findViewById(R.id.password);
         email = findViewById(R.id.emailid);
+        phoneNumber = findViewById(R.id.phoneNumber);
         signup = findViewById(R.id.register);
 
         FirebaseApp.initializeApp(this);
@@ -48,6 +49,7 @@ public class SignUpActivity extends AppCompatActivity {
                 String txt_username = username.getText().toString();
                 String txt_email =  email.getText().toString();
                 String txt_password = passowrd.getText().toString();
+                String txt_phoneNumber = phoneNumber.getText().toString();
 
                 if(TextUtils.isEmpty(txt_username)|| TextUtils.isEmpty(txt_email)|| TextUtils.isEmpty(txt_password)  ){
                     Toast.makeText(SignUpActivity.this,"All fields are required",Toast.LENGTH_SHORT).show();
@@ -56,14 +58,14 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this,"Password must be of atleast 6 characters",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    register(txt_username,txt_email,txt_password);
+                    register(txt_username,txt_email,txt_password, txt_phoneNumber);
                 }
             }
         });
 
 
     }
-    private void register(final String username, String email, String password){
+    private void register(final String username, String email, String password, final String phoneNumber){
 
         auth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -79,6 +81,7 @@ public class SignUpActivity extends AppCompatActivity {
                             hashMap.put("id",userID);
                             hashMap.put("username",username);
                             hashMap.put("imageURL","default");
+                            hashMap.put("phoneNumber", String.valueOf(phoneNumber));
 
                             reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

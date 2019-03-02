@@ -33,7 +33,7 @@ public class CashierActivity extends AppCompatActivity {
     private CartAdapter mCartAdapter;
     private  List<Cart> cartList = new ArrayList<>();
     RecyclerView recyclerView;
-    TextView buyerName ;
+    TextView buyerName , buyerPhone;
     String buyerId;
     private static final String TAG = "CashierActivity";
     @Override
@@ -44,6 +44,7 @@ public class CashierActivity extends AppCompatActivity {
         scan = findViewById(R.id.scan);
         mOrders = new ArrayList<>();
         buyerName = findViewById(R.id.buyer_name);
+        buyerPhone = findViewById(R.id.phoneNumber);
 
 
        recyclerView = findViewById(R.id.recycler_view);
@@ -168,6 +169,7 @@ public class CashierActivity extends AppCompatActivity {
                     for(Users u : users){
                         u.getUsername();
                         buyerName.setText(u.getUsername());
+                        buyerPhone.setText(String.valueOf(u.getPhoneNumber()));
                     }
                 }
             }

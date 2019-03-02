@@ -4,6 +4,16 @@ public class Users {
     String id;
     String imageURL;
     String username;
+    Long phoneNumber;
+
+    public Long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(Long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
 
     public Users(){
 
@@ -33,9 +43,10 @@ public class Users {
         this.username = username;
     }
 
-    public Users(String id, String imageURL, String username) {
+    public Users(String id, String imageURL, String username,Long phoneNumber) {
         this.id = id;
         this.imageURL = imageURL;
         this.username = username;
+        this.phoneNumber = phoneNumber;
     }
 }
