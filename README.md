@@ -5,3 +5,4 @@ User can log in to the shopping mart's app and scan products by bar code scanner
 after shopping user can click on pay button and a QR Code will be generated and now, user can show QR code to the cashier and
 after scanning QR code cashier can see the items in the list, generate slip and all work will be done easily.
 [https://imgur.com/a/MkAeqBm]
+![screenshots](https://imgur.com/a/MkAeqBm.png)
